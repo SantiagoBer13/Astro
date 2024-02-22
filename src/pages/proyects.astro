@@ -1,48 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import NextTabsProjects from "../components/NextTabsProjects";
 
-const projects = [
-  {
-    title: "Fifa Tournment",
-    description:
-      "    Lorem ipsum dolor sit, amet consectetur adipisicing elit. In doloribus ullam.",
-    categories: ["VideoGames", "Social"],
-    finished: true,
-  },
-  {
-    title: "Soccer Match",
-    description:
-      "    Lorem ipsum dolor sit, amet consectetur adipisicing elit. In doloribus ullam.",
-    categories: ["VideoGames", "Sports"],
-    finished: false,
-  },
-];
-
-import imgClubHarmony from '../assets/club-harmony.png'
 const background = "red";
 const fontSize = "2rem";
-const allPosts = Astro.glob("./posts/*.md");
 ---
-<!-- 
-    <ul id="portfolio">
-        {projects.map((item, index) => (
-            <li >
-                {item.title}
-                <p>
-                    {item.categories.map((categorie, index) => (
-                        <span >{categorie} </span>
-                    ))}
-                </p>
-                <p>
-                    {item.finished ? <span>Terminado</span> : <span>En progreso</span>}
-                </p>
-            </li>
-        ))}
-        
-    </ul>
-    <a href="/posts/post-1">Post-1</a>
--->
 <div class="w-[80%] m-auto my-9">
   <div class="my-8">
     <h2 class="text-[#C54108] text-4xl font-bold my-10">Portfolio</h2>

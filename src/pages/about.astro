@@ -1,5 +1,4 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { Chip } from "@nextui-org/react";
 import { Icon } from "astro-icon/components";
 import Avatar from "../assets/avatarSBT.jpg";
@@ -30,7 +29,7 @@ const imgAvatar = Avatar.src;
     <div class="h-2/6 lg:block flex justify-center items-center">
       <button
         type="button"
-        class="px-10 py-2 font-bold text-[#C54108] border-[#C54108] hover:text-white hover:bg-[#C54108] border-2"
+        class="px-10 py-2 w-auto font-bold text-[#C54108] border-[#C54108] hover:text-white hover:bg-[#C54108] border-2"
       >
       <a href="#contact">
         Contact Me
@@ -173,8 +172,9 @@ const imgAvatar = Avatar.src;
   }
 
   .about-text > div p:first-child {
-    width: 160px;
     padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 5px;
     font-size: 0.9rem;
     text-align: center;
