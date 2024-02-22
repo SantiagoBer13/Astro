@@ -10,9 +10,8 @@ export function FormSendEmail() {
   const [message, setMessage] = useState("");
   const [toast, setToast] = useState("hidden");
 
-  const callApi = (event) => {
+  const callApi = (event: any) => {
     event.preventDefault();
-    console.log(who, title, message);
     setVariable(<span>Enviar Correo <Spinner color="primary" size="sm" /></span>);
     fetch("https://backend-send-email.onrender.com/api/send", {
       method: "POST",
@@ -73,7 +72,7 @@ export function FormSendEmail() {
           name="message"
           id="message"
           className="w-full"
-          rows="10"
+         
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required

@@ -5,3 +5,7 @@ label{
 input, textarea, button{
     @apply w-full p-2 border-2
 }
+
+textarea{
+    height: 242px;
+}
