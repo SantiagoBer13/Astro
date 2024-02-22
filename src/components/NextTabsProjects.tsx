@@ -1,7 +1,7 @@
 import React from "react";
 import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
 import CardProjectDev from "./CardProjectDev"
-import ClubHarmony from "../assets/club-Harmony.png";
+import ClubHarmony from "../assets/club-harmony.png";
 const imgClubHarmony = ClubHarmony.src;
 
 const projects = [
