@@ -20,7 +20,7 @@ export default function App({ project }: { project: any }) {
           <p className="text-black ">{project.name}</p>
         </div>
 
-        <Button className="text-tiny" color="primary" radius="full" size="md">
+        <Button className="text-tiny w-auto" color="primary" radius="full" size="md">
           <a href={project.web_site} target="_blank">
             Ver Web Site
           </a>

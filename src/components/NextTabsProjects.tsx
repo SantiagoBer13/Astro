@@ -1,8 +1,6 @@
 import React from "react";
 import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
 import CardProjectDev from "./CardProjectDev"
-import ClubHarmony from "../assets/club-harmony.png";
-const imgClubHarmony = ClubHarmony.src;
 
 const projects = [
   {
@@ -18,7 +16,7 @@ const projects = [
       "Express",
       "PrimeNG",
     ],
-    img: imgClubHarmony,
+    img: "http://imgfz.com/i/7UwFytQ.png",
     web_site: "https://club-harmony.web.app/",
   }
 ];
