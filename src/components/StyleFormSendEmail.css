@@ -1,0 +1,7 @@
+label{
+    @apply block my-5 text-lg
+}
+
+input, textarea, button{
+    @apply w-full p-2 border-2
+}

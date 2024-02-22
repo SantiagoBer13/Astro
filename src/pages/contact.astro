@@ -1,0 +1,68 @@
+---
+import React from "react";
+import { Icon } from "astro-icon/components";
+import {FormSendEmail} from "../components/FormSendEmail"
+const loading = true
+---
+
+<div class="w-[80%] m-auto my-20" id="contact">
+    <div class=" my-8">
+        <h2 class="text-[#C54108] text-4xl font-bold my-10">Contactame</h2>
+    </div>
+    <div class="my-8 lg:flex info-contact">
+        <div class="lg:w-2/5 w-full flex flex-col">
+            <div>
+                <p>
+                    Gracias por ver mi sitio web, si desea ponerse en contacto conmigo, puede hacerlo a través de:
+                </p>
+            </div>
+            <div class="tags">
+                <h3><Icon name={`logos/email`} class="m-auto" size={44} /></h3>
+                <h4>Correo</h4>
+                <p>devpassionate@gmail.com</p>
+            </div>
+            <div class="tags">
+                <h3><Icon name={`logos/phone`} class="m-auto" size={44} /></h3>
+                <h4>Telefono</h4>
+                <p>+57 3208618129</p>
+            </div>
+            <div class="tags">
+                <h3><Icon name={`logos/location`} class="m-auto" size={44} /></h3>
+                <h4>Ubicacion</h4>
+                <p>Colombia, Cota, Cundinamarca</p>
+            </div>
+        </div>
+        <div class="lg:w-3/5 w-full lg:ml-8">
+            <div>
+                <h3 class="text-2xl">Enviame un correo</h3>
+            </div>
+            <FormSendEmail client:visible/>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .info-contact div div{
+        @apply my-4 
+    }
+
+
+    .tags{
+        @apply  rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border border-gray-100
+
+    }
+
+    .tags h3, .tags h4, .tags p{
+        @apply my-2 text-center blur-none
+    }
+
+    .tags h3{
+        @apply  mt-[1.91rem]
+    }
+
+    .tags p{
+        @apply mb-7
+    }
+
+</style>

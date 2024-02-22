@@ -1,20 +1,7 @@
 ---
-console.log("Header")
+import NextNavBar from './NextNavBar'
 ---
 
 <header>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">
-                    HOME
-                </a>
-            </li>
-            <li>
-                <a href="/proyects">
-                    PROYECTS
-                </a>
-            </li>
-        </ul>
-    </nav>
+  <NextNavBar client:visible header="Header" />
 </header>

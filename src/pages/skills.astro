@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon/components";
+
+var conocidas = [
+  "html",
+  "css",
+  "js",
+  "express",
+  "angular",
+  "node",
+  "sql",
+  "mysql",
+  "jira",
+  "git",
+  "postman",
+];
+
+var learning = ["astro", "playwright", "jmeter"];
+---
+
+<div class="w-[80%] m-auto my-20" id="skills">
+  <div class="conocidas my-8">
+    <h2 class="text-[#C54108] text-4xl font-bold my-10">Habilidades</h2>
+    <p class="text-lg">
+      Las siguientes herramientas se dividen en dos secciones: las que he
+      utilizado para algunos sitios web que he creado y las que estoy
+      aprendiendo debido a su creciente popularidad en el sector del desarrollo
+      web.
+    </p>
+  </div>
+  <div class="conocidas my-8">
+    <h3>
+      Tecnologias Web que he Usado
+    </h3>
+    <div class="flex flex-wrap gap-4">
+      {
+        conocidas.map((item, index) => (
+          <div>
+            <Icon name={`logos/${item}`} class="m-auto" size={75} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="aprendiendo my-8">
+    <h3>
+      Tecnologias Web que estoy aprendiendo
+    </h3>
+    <div class="flex gap-4">
+      {
+        learning.map((item, index) => (
+          <div>
+            <Icon name={`logos/${item}`} class="m-auto" size={75} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+    div h3{
+        @apply text-2xl my-5
+    }
+</style>

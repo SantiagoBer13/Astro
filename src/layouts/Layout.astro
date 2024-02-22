@@ -1,54 +1,39 @@
 ---
-import Header from '../components/Header.astro';
+import "../styles/global.css";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+import { Spinner } from "@nextui-org/react";
+
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+
+    <div>
+      <button class="my-3 cursor-pointer font-bold text-[#C54108] border-[#C54108] hover:text-white hover:bg-[#C54108]">
+        <span>Enviar Correo <span class="h-full"><Spinner color="primary" size="sm" className="h-full" /></span></span>
+      </button>
+    </div>
+    
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  body {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='2000' preserveAspectRatio='none' viewBox='0 0 1440 2000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1019%26quot%3b)' fill='none'%3e%3cpath d='M1196.417%2c840.504C1313.691%2c839.142%2c1437.582%2c813.02%2c1498.953%2c713.076C1562.689%2c609.28%2c1550.118%2c474.653%2c1483.806%2c372.483C1422.808%2c278.5%2c1308.448%2c248.558%2c1196.417%2c246.945C1080.685%2c245.279%2c958.453%2c267.639%2c894.331%2c363.998C823.774%2c470.027%2c813.265%2c612.684%2c881.457%2c720.249C945.948%2c821.976%2c1075.978%2c841.903%2c1196.417%2c840.504' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M595.8706798309595 1365.0039634142681L826.0493914983907 1185.1686444606703 646.2140725447928 954.989932793239 416.03536087736154 1134.825251746837z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M45.33329481987134 143.13755262013478L171.06611719897057 244.95398463127322 260.9243540261286 5.446535057055158z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1583.465710043167 925.2236505193866L1189.1720344827418 1045.7713246433154 1309.7197086066706 1440.0650002037407 1704.0133841670959 1319.517326079812z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M605.0098557602049 1164.5577024721874L372.56100027666906 1309.8078681502493 517.811165954731 1542.2567236337852 750.2600214382669 1397.0065579557233z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1462.2534920822275 646.8015622412158L1040.8967004846215 721.0981331046277 1536.5500629456392 1068.1583538388218z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M147.401%2c1846.629C251.203%2c1841.556%2c354.254%2c1803.935%2c406.284%2c1713.971C458.374%2c1623.904%2c446.261%2c1512.071%2c392.359%2c1423.077C340.453%2c1337.378%2c247.517%2c1290.435%2c147.401%2c1286.542C39.076%2c1282.329%2c-72.347%2c1312.758%2c-132.942%2c1402.649C-200.838%2c1503.37%2c-224.215%2c1638.907%2c-159.363%2c1741.614C-97.516%2c1839.562%2c31.699%2c1852.283%2c147.401%2c1846.629' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1122.683%2c1753.397C1186.11%2c1758.051%2c1256.186%2c1747.103%2c1290.286%2c1693.421C1326.266%2c1636.779%2c1314.563%2c1563.345%2c1279.91%2c1505.881C1246.451%2c1450.397%2c1187.43%2c1413.093%2c1122.683%2c1415.495C1061.486%2c1417.766%2c1012.131%2c1462.221%2c984.445%2c1516.844C959.412%2c1566.233%2c964.938%2c1623.795%2c992.875%2c1671.601C1020.532%2c1718.927%2c1068.015%2c1749.386%2c1122.683%2c1753.397' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M502.383%2c684.001C634.754%2c689.998%2c780.847%2c658.662%2c845.403%2c542.944C908.9%2c429.125%2c847.991%2c295.848%2c781.441%2c183.786C716.791%2c74.924%2c628.899%2c-29.74%2c502.383%2c-34.661C368.764%2c-39.858%2c246.005%2c42.559%2c183.008%2c160.51C123.327%2c272.253%2c143.301%2c405.979%2c209.279%2c514.124C272.314%2c617.446%2c381.474%2c678.523%2c502.383%2c684.001' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1568.1334425164725 1724.6805503720611L1358.8301430125948 1389.0138393498798 1191.1852834359702 1691.4531719518823z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M684.672%2c1592.786C768.568%2c1592.509%2c847.53%2c1547.207%2c886.646%2c1472.988C923.49%2c1403.079%2c904.175%2c1320.89%2c863.758%2c1252.984C824.435%2c1186.915%2c761.408%2c1138.435%2c684.672%2c1133.641C598.495%2c1128.257%2c506.531%2c1153.839%2c462.126%2c1227.891C416.724%2c1303.606%2c434.409%2c1398.956%2c480.378%2c1474.328C524.308%2c1546.358%2c600.303%2c1593.064%2c684.672%2c1592.786' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1516.3383818891632 659.7145379346323L1280.1352360622582 334.60879846006407 955.0294965876899 570.8119442869692 1191.232642414595 895.9176837615374z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M845.9727623904163-83.85322796683487L458.18812388052777 130.61644246471369 786.70087895506 335.8939948220842z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M638.1948619714294 2046.0971231808978L433.0636549731851 1717.1213366341824 268.76050029994974 2013.5320740064465z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M370.014519461306 427.79215714140133L190.15101893655532 128.44902359431723-109.19211461052879 308.3125241190679 70.6713859142219 607.655657666152z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M506.6624216685405 1369.9146568557017L101.45149959683306 1222.4299426220384-46.03321463683022 1627.640864693746 359.1777074348773 1775.1255789274092z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1403.316%2c552.09C1509.401%2c553.416%2c1615.934%2c509.776%2c1667.914%2c417.289C1719.026%2c326.346%2c1698.523%2c214.437%2c1642.572%2c126.388C1590.804%2c44.923%2c1499.816%2c2.944%2c1403.316%2c0.898C1302.592%2c-1.238%2c1198.789%2c30.159%2c1145.817%2c115.856C1090.404%2c205.501%2c1096.361%2c320.057%2c1149.933%2c410.814C1202.618%2c500.069%2c1299.679%2c550.794%2c1403.316%2c552.09' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M925.8124301465106 891.2449953759929L560.3139454765051 696.9060038189726 731.4734385894903 1256.7434800459985z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1007.0629061537975 1641.3520866136548L951.3938177264222 1992.8328779925748 1302.8746091053422 2048.5019664199503 1358.5436975327175 1697.0211750410301z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1263.901%2c1368.315C1384.458%2c1364.254%2c1480.424%2c1280.871%2c1542.343%2c1177.351C1606.334%2c1070.365%2c1639.146%2c943.472%2c1585.247%2c831.063C1523.806%2c702.925%2c1405.921%2c601.604%2c1263.901%2c596.644C1114.157%2c591.415%2c970.413%2c674.294%2c901.178%2c807.174C836.257%2c931.774%2c874.681%2c1079.279%2c950.953%2c1197.273C1020.122%2c1304.279%2c1136.558%2c1372.605%2c1263.901%2c1368.315' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1019'%3e%3crect width='1440' height='2000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover
+  }
 </style>
