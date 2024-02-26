@@ -52,7 +52,9 @@ export default function NextNavBar({ header }: { header: string }) {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button as={Link} color="primary" className="bg-[#C54108] text-white" href="#" variant="flat">
-            Download CV
+            <a href="https://publuu.com/flip-book/409469/925708" download="curriculum.pdf" target="_blank">
+              Download CV
+            </a>
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -76,6 +78,21 @@ export default function NextNavBar({ header }: { header: string }) {
         <NavbarMenuItem>
             <Link className="w-full" color="foreground" href="#" size="lg">
               BLOG
+            </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+            <Link className="w-full" color="foreground" target="_blank" href="https://github.com/SantiagoBer13" size="lg">
+              Git Hub
+            </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+            <Link className="w-full" color="foreground" target="_blank" href="https://www.linkedin.com/in/santiago-bernal-tinjaca/" size="lg">
+              LinkedIn
+            </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+            <Link className="w-full" color="foreground" target="_blank" href="https://www.instagram.com/devpassionate/" size="lg">
+              Instagram
             </Link>
         </NavbarMenuItem>
       </NavbarMenu>

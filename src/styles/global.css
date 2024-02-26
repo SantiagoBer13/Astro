@@ -1,8 +1,11 @@
 *{
-    font-family: 'Lura';
+    font-family: "Montserrat", sans-serif;
 }
 
 li{
     list-style: none;
 }
 
+.font-noto{
+    font-family: "Noto Serif", serif;
+}
