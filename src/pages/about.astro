@@ -5,7 +5,7 @@ import Avatar from "../assets/avatarSBT.jpg";
 const imgAvatar = Avatar.src;
 ---
 
-<div class="about lg:flex lg:h-[500px] min-h-80 ">
+<div class="about lg:flex lg:h-[600px] min-h-80 ">
   <div class="about-text h-full lg:w-5/12 flex-col mt-16">
     <div class="flex-col lg:items-start items-center h-4/6">
       <p
@@ -18,10 +18,10 @@ const imgAvatar = Avatar.src;
           >
         </button>
       </p>
-      <p class="font-noto">Santiago Bernal Tinjaca</p>
+      <p class="font-noto">Santiago Bernal Tinjacá</p>
       <p class="bg-black">
         <Chip color="warning" variant="flat">
-          Estudiante de Ingeniera de Software
+          Estudiante de Ingenieria de Software
         </Chip>
         <Chip color="warning" variant="flat">Analista QA Funcional</Chip>
       </p>
@@ -39,7 +39,7 @@ const imgAvatar = Avatar.src;
   </div>
   <div class="lg:w-5/12 w-full h-full flex items-center">
     <div class="lg:w-3/6 lg:h-3/6 w-4/6 h-4/6 lg:my-0 my-10 bg-black mx-auto rounded-full">
-      <img src={imgAvatar} class="object-cover w-full h-full rounded-full hover:scale-105 duration-1000"/>
+      <img src={imgAvatar} alt="Avatar de usuario" class="object-cover w-full h-full rounded-full hover:scale-105 duration-1000"/>
     </div>
   </div>
   <span
@@ -91,7 +91,7 @@ const imgAvatar = Avatar.src;
       <div class="w-full my-5 ">
         <h3 class="my-2">Descripci&oacute;n</h3>
         <p class="leading-9">
-          Estudiante de Ingeniería de Software con conocimientos en tecnologías web como HTML, CSS y Bootstrap, así como en bases de datos SQL y MySQL. Mi competencia en lenguajes de programación como JavaScript.
+          ¡Hola! Soy un estudiante de ingeniería de software apasionado por asegurar la calidad del software y comprometido con el aprendizaje continuo. Mi enfoque se centra en mejorar constantemente mis habilidades en pruebas de software para garantizar la calidad del producto. Tengo conocimiento en realizar pruebas manuales y estoy en proceso de aprender más sobre las pruebas automatizadas. Estoy ansioso por encontrar oportunidades que me permitan aplicar mis conocimientos en un entorno profesional y seguir creciendo como QA. Estoy emocionado por la posibilidad de aprender y colaborar en un equipo de trabajo colaborativo. ¡Espero poder contribuir positivamente y aprender mucho en el proceso!
         </p>
       </div>
       <div class="w-full my-5 education">
@@ -100,7 +100,7 @@ const imgAvatar = Avatar.src;
           <ul>
             <div>
               <li>2021 - Presente</li>
-              <p> Ingenieria de Software - Corporacion Universitaria Iberoamercana</p>
+              <p> Ingenieria de Software - Corporacion Universitaria Iberoamericana</p>
             </div>
           </ul>
         </div>
@@ -119,8 +119,10 @@ const imgAvatar = Avatar.src;
     
     <div class="w-full lg:w-1/2 my-5 courses">
       <h3>Cursos</h3>
-      <div class="flex justify-center my-3">
-        <img src='https://online.pubhtml5.com/uywum/ttpf/files/shot.jpg' data-rel='fh5-light-box-demo' data-href='https://online.pubhtml5.com/uywum/ttpf/' data-width='475' data-height='500' data-title='Libro De Certificados'>
+      <div class="flex justify-center items-center h-full my-3">
+        <div class="">
+          <img src='https://online.pubhtml5.com/uywum/ttpf/files/shot.jpg' data-rel='fh5-light-box-demo' data-href='https://online.pubhtml5.com/uywum/ttpf/' data-width='475' data-height='500' data-title='Libro De Certificados'>
+        </div>
       </div>
     </div>
   </div>
@@ -151,7 +153,7 @@ const imgAvatar = Avatar.src;
   }
 
   .about-text > div p:nth-child(2) {
-    font-weight: bolder;
+    
     font-size: 2rem;
   }
 
